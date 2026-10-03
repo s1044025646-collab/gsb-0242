@@ -1,0 +1,23 @@
+{
+  "name": "word-board-search",
+  "version": "1.0.0",
+  "description": "本地英文单词棋盘词语路径搜索后端（API + CLI）",
+  "type": "module",
+  "bin": {
+    "wordboard": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "tsc -p tsconfig.json && node --test dist/__tests__/search.test.js",
+    "start": "node dist/server/index.js",
+    "demo": "powershell -ExecutionPolicy Bypass -File scripts/demo.ps1",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\""
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.0",
+    "typescript": "^7.0.0"
+  }
+}
